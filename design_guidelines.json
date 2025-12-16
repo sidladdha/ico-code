@@ -1,0 +1,156 @@
+{
+  "design_system": {
+    "identity": {
+      "name": "E1_Anti_AI_Trading",
+      "tone": "Serious, Precise, Institutional, Dark-Mode-First",
+      "archetype": "The 'Control Room' - Dense, Data-Heavy, High-Contrast",
+      "principles": [
+        "Fusion: Bloomberg Terminal meets Swiss Poster",
+        "Emotion: Trust through Precision",
+        "Content: Data is the hero, UI is the frame",
+        "Contrast: Stark blacks vs. Neon signals"
+      ]
+    },
+    "typography": {
+      "headings": {
+        "family": "IBM Plex Sans",
+        "weights": ["500", "600"],
+        "tracking": "tracking-tight",
+        "usage": "Page titles, Section headers"
+      },
+      "body": {
+        "family": "Inter",
+        "weights": ["400", "500"],
+        "usage": "General text, labels"
+      },
+      "mono": {
+        "family": "JetBrains Mono",
+        "weights": ["400", "500"],
+        "usage": "Prices, Token Balances, Hash IDs, Order Book Data"
+      }
+    },
+    "colors": {
+      "theme": "dark",
+      "palette": {
+        "background": "#09090b",
+        "surface": "#18181b",
+        "surface_highlight": "#27272a",
+        "border": "rgba(255, 255, 255, 0.1)",
+        "primary": "#ffffff",
+        "secondary": "#a1a1aa",
+        "accent_success": "#10b981",
+        "accent_danger": "#f43f5e",
+        "accent_brand": "#6366f1"
+      },
+      "rules": [
+        "NEVER use purple/teal gradients for backgrounds.",
+        "Use 'accent_success' (Emerald-500) ONLY for Buy/Positive numbers.",
+        "Use 'accent_danger' (Rose-500) ONLY for Sell/Negative numbers.",
+        "Backgrounds must be solid dark (#09090b) or very subtle noise. No large gradients."
+      ]
+    },
+    "layout": {
+      "spacing_scale": "Generous (p-6, p-8) for containers, Tight (p-2, gap-1) for data tables.",
+      "grid_system": "Bento Grid Mode B (Control Room)",
+      "container_style": "Border-only (1px solid border-white/10), No Shadow, Sharp or sm-rounded corners."
+    },
+    "components": {
+      "buttons": {
+        "primary": "bg-white text-black hover:bg-gray-200 rounded-sm font-medium",
+        "secondary": "bg-transparent border border-white/20 text-white hover:bg-white/5 rounded-sm",
+        "buy": "bg-emerald-500/10 text-emerald-500 border border-emerald-500/50 hover:bg-emerald-500/20",
+        "sell": "bg-rose-500/10 text-rose-500 border border-rose-500/50 hover:bg-rose-500/20"
+      },
+      "cards": {
+        "style": "bg-card/50 backdrop-blur-sm border border-border rounded-lg"
+      },
+      "inputs": {
+        "style": "bg-background border-input focus:ring-1 focus:ring-white/20 rounded-md"
+      }
+    },
+    "visual_enhancers": {
+      "glassmorphism": "Use backdrop-blur-md for sticky headers and overlays.",
+      "borders": "Use 'border-white/5' for subtle separation.",
+      "textures": "Add a subtle noise texture overlay to the main background if possible."
+    }
+  },
+  "pages": {
+    "login": {
+      "layout": "Split Screen",
+      "visuals": {
+        "left_col": "Form centered, minimal branding.",
+        "right_col": "Full height image, abstract geometric.",
+        "image_url": "https://images.unsplash.com/photo-1762258344624-52d8c3b74c66?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NzR8MHwxfHNlYXJjaHwxfHxhYnN0cmFjdCUyMGRhcmslMjBnZW9tZXRyaWMlMjBkaWdpdGFsJTIwYmFja2dyb3VuZHxlbnwwfHx8fDE3NjU4NjcyOTB8MA&ixlib=rb-4.1.0&q=85"
+      }
+    },
+    "dashboard": {
+      "layout": "Bento Grid (Mode B)",
+      "sections": [
+        {
+          "name": "Portfolio Summary",
+          "span": "col-span-full md:col-span-4",
+          "content": "Total Balance (Big Mono Font), PnL (Green/Red)"
+        },
+        {
+          "name": "Market Overview",
+          "span": "col-span-full md:col-span-8",
+          "content": "Price Chart (Recharts AreaChart - Gradient Fill)"
+        },
+        {
+          "name": "Recent Activity",
+          "span": "col-span-full md:col-span-4",
+          "content": "List of recent trades"
+        }
+      ]
+    },
+    "marketplace": {
+      "layout": "Three Column Density",
+      "sections": [
+        {
+          "name": "Order Book",
+          "span": "col-span-3",
+          "style": "Dense table, red/green text, mono font"
+        },
+        {
+          "name": "Price Chart",
+          "span": "col-span-6",
+          "style": "Main visual area"
+        },
+        {
+          "name": "Trade Form",
+          "span": "col-span-3",
+          "style": "Sticky, prominent Buy/Sell tabs"
+        }
+      ]
+    }
+  },
+  "assets": {
+    "images": [
+      {
+        "category": "background",
+        "url": "https://images.unsplash.com/photo-1762258344624-52d8c3b74c66?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NzR8MHwxfHNlYXJjaHwxfHxhYnN0cmFjdCUyMGRhcmslMjBnZW9tZXRyaWMlMjBkaWdpdGFsJTIwYmFja2dyb3VuZHxlbnwwfHx8fDE3NjU4NjcyOTB8MA&ixlib=rb-4.1.0&q=85",
+        "description": "Abstract dark geometric cylinders - Use for Login/Landing Hero"
+      },
+      {
+        "category": "avatar",
+        "url": "https://images.unsplash.com/photo-1648293821367-b39c09679658?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NzB8MHwxfHNlYXJjaHwzfHxwcm9mZXNzaW9uYWwlMjB1c2VyJTIwYXZhdGFyJTIwcG9ydHJhaXR8ZW58MHx8fHwxNzY1ODY3MjkzfDA&ixlib=rb-4.1.0&q=85",
+        "description": "B&W Professional Portrait - Use for User Profile"
+      }
+    ],
+    "icons": "Use 'lucide-react' for all UI icons. Use 'ArrowUpRight' for profit, 'ArrowDownRight' for loss."
+  },
+  "instructions_to_main_agent": [
+    "1. INSTALL FONTS: Add '@fontsource/ibm-plex-sans' and '@fontsource/jetbrains-mono' to package.json immediately.",
+    "2. DARK MODE DEFAULT: Ensure the app defaults to dark mode. Add 'dark' class to the html or body tag by default.",
+    "3. NO GRADIENT TEXT: Do not use gradient text for headings. Keep it stark white.",
+    "4. DATA DENSITY: In the Order Book and History, reduce cell padding (py-2) to show more data.",
+    "5. USE SONNER: Replace any 'alert()' calls with 'toast()' from 'sonner'.",
+    "6. MOCK DATA: Generate realistic mock data for the order book (spread of prices) to make the UI look populated.",
+    "7. CHARTS: Use 'recharts' for the price chart. Style it minimal: hide grid lines, use a single accent color stroke."
+  ],
+  "universal_guidelines": [
+    "Avoid 'AI Slop': No generic centered layouts.",
+    "Micro-interactions: Add hover:bg-white/5 to all table rows and list items.",
+    "Accessibility: Ensure green/red text has enough contrast against the dark background."
+  ]
+}
