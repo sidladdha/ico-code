@@ -22,33 +22,33 @@ function App() {
             <Route path="/login" element={<LoginPage />} />
             <Route
               path="/"
-              element=(
+              element={
                 <PrivateRoute>
                   <Layout>
                     <DashboardPage />
                   </Layout>
                 </PrivateRoute>
-              )
+              }
             />
             <Route
               path="/marketplace"
-              element=(
+              element={
                 <PrivateRoute>
                   <Layout>
                     <MarketplacePage />
                   </Layout>
                 </PrivateRoute>
-              )
+              }
             />
             <Route
               path="/transactions"
-              element=(
+              element={
                 <PrivateRoute>
                   <Layout>
                     <TransactionsPage />
                   </Layout>
                 </PrivateRoute>
-              )
+              }
             />
           </Routes>
           <Toaster theme="dark" position="top-right" />
