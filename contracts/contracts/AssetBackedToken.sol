@@ -140,11 +140,11 @@ contract AssetBackedToken is ERC20, AccessControl, Pausable {
         _unpause();
     }
     
-    function _beforeTokenTransfer(
+    function _update(
         address from,
         address to,
-        uint256 amount
+        uint256 value
     ) internal override whenNotPaused {
-        super._beforeTokenTransfer(from, to, amount);
+        super._update(from, to, value);
     }
 }
